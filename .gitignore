@@ -2,3 +2,5 @@
 # Ignore any file named *.docs *.doc.
 *.docs
 *.doc
+!./Описание_задания_для_практики.docx
+!./Сценарий_практики.docx
