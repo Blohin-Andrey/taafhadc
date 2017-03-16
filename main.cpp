@@ -20,13 +20,23 @@ void transp_m(double **a,double **d,int n) {
 }
 
 /**
- * Описание назначения
- * @author 
- * @param 
- * @return
+ * Square matrices multiplication (row by column) 
+ * @author rkuchumov <kuchumovri@gmail.com>
+ * @param a first matrix operand
+ * @param b second matrix operand
+ * @param d result matrix
+ * @param n matrix size
  */
-void umn_m(double **a, double **b,double **d,int n) {
-    // Напишите реализацию процедуры здесь
+void umn_m(double **a, double **b, double **d, int n) {
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < n; ++j) {
+			d[i][j] = 0;
+
+			for (int k = 0; k < n; ++k) {
+				d[i][j] += a[i][k] * b[k][j];
+			}
+		}
+	}
 }
 
 /**
